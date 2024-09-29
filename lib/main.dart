@@ -36,9 +36,12 @@ class PaycoinApp extends ConsumerWidget {
         textTheme: Typography.blackMountainView,
         brightness: Brightness.light,
         scaffoldBackgroundColor: Colors.white,
+        primaryColor: const Color.fromARGB(255, 29, 97, 239),
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
         primaryColor: Colors.deepPurple,
       ),
-      darkTheme: ThemeData(),
     );
   }
 }
