@@ -1,11 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:paycoin_kyusung_app/features/home/home_screen.dart';
+import 'package:paycoin_kyusung_app/features/splash_screen.dart';
 
 final routerProvider = Provider((ref) {
 //   ref.watch(authState);
   return GoRouter(
-      initialLocation: "/home",
+      initialLocation: "/splash",
       //   redirect: (context, state) {
       //     final isLoggedIn = ref.read(authRepo).isLoggedIn;
       //     if (!isLoggedIn) {
@@ -23,6 +24,11 @@ final routerProvider = Provider((ref) {
             return child;
           },
           routes: [
+            GoRoute(
+              name: SplashScreen.routeName,
+              path: "/splash",
+              builder: (context, state) => const SplashScreen(),
+            ),
             GoRoute(
               name: HomeScreen.routeName,
               path: "/home",
