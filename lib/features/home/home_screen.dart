@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:paycoin_kyusung_app/generated/l10n.dart';
 
 class HomeScreen extends ConsumerWidget {
   static String routeName = 'home';
@@ -32,7 +33,6 @@ class HomeScreen extends ConsumerWidget {
       body: Column(
         children: [
           const SizedBox(height: 10),
-          // 총 보유자산 섹션
           Container(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Column(
@@ -40,9 +40,9 @@ class HomeScreen extends ConsumerWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      '총 보유자산',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    Text(
+                      S.of(context).totalBalance,
+                      style: const TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     Switch(
                       value: true,

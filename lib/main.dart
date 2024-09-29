@@ -18,6 +18,7 @@ class PaycoinApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // S.load(const Locale('en'));
     return MaterialApp.router(
       routerConfig: ref.watch(routerProvider),
       title: 'Paycoin',
