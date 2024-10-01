@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Paycoin`
+  String get appName {
+    return Intl.message(
+      'Paycoin',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Balance`
   String get totalBalance {
     return Intl.message(
